@@ -4,6 +4,12 @@
 
 * [Dallaway, Ricard. *Lift Cookbook.* O'Reilly, 2013](http://chimera.labs.oreilly.com/books/1234000000030/index.html)
 * [Lift Website](http://liftweb.net/)
+* Perrett, Timothy. *Lift in Action.* Manning, November 27, 2011.
+* It was surprisingly hard to find good resources about Lift.
+    * Not many books available and most are old and have poor reviews on Amazon.com.
+    * Lift website points to the *Lift Cookbook*.
+        * I find tutorial format better for learning a new technology.
+        * Cookbook format is good for learning more details once you have a basic understanding.
 
 ##What is Lift?
 
@@ -49,7 +55,17 @@ Unzip the file.)
 * Like most web frameworks, Lift uses HTML templates to define the user interface.
     * When you hit the root URL of a Lift application, the view you see is defined in a file called `index.html`.
     * Located at "<project root>/src/main/webapp".
-* 
+* Lift templates are plain, valid HTML files with .html extensions.
+* No Scala code is embedded in the HTML.
+    * Instead HTML is embedded in your Scala code!
+* Tags in the HTML that you want to replace with dynamic content are marked with `lift` or `data-lift` attributes.
+   * `data-lift` option is more compliant with HTML standards.
+   * e.g. `<span data-lift="HelloWorld.howdy">Placeholder</span>`
+* The value of the data-lift attribute point to a Scala class and function.
+* These functions are known as `snippets`.
+* Lift also has a number of other alternative ways to associate an HTML tag with a snippet.
+    * But the one above seems to be the most "standard".
+
 
 
 
