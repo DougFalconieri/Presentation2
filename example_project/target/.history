@@ -1,0 +1,6 @@
+container:start
+container:stop
+eclipse
+container:stop
+~; container:start; container:reload /
+container:stop

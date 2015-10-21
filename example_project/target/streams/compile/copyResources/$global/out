@@ -1,0 +1,5 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\Lift\lift-lift_26_sbt-d71cccf\scala_211\lift_test\src\main\resources\.keep,C:\Lift\lift-lift_26_sbt-d71cccf\scala_211\lift_test\target\scala-2.11\classes\.keep)[0m
+[0m[[0mdebug[0m] [0m	(C:\Lift\lift-lift_26_sbt-d71cccf\scala_211\lift_test\src\main\resources\logback.xml,C:\Lift\lift-lift_26_sbt-d71cccf\scala_211\lift_test\target\scala-2.11\classes\logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Lift\lift-lift_26_sbt-d71cccf\scala_211\lift_test\src\main\resources\props,C:\Lift\lift-lift_26_sbt-d71cccf\scala_211\lift_test\target\scala-2.11\classes\props)[0m
+[0m[[0mdebug[0m] [0m	(C:\Lift\lift-lift_26_sbt-d71cccf\scala_211\lift_test\src\main\resources\props\default.props,C:\Lift\lift-lift_26_sbt-d71cccf\scala_211\lift_test\target\scala-2.11\classes\props\default.props)[0m
