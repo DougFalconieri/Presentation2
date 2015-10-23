@@ -63,9 +63,42 @@ Unzip the file.)
    * e.g. `<span data-lift="HelloWorld.howdy">Placeholder</span>`
 * The value of the data-lift attribute point to a Scala class and function.
 * These functions are known as `snippets`.
+* Snippets are located at “<project root>/src/main/scala/code/snippet” directory.
 * Lift also has a number of other alternative ways to associate an HTML tag with a snippet.
     * But the one above seems to be the most "standard".
 
+##Snippets
+
+* A snippet takes in a NodeSeq and returns another NodeSeq.
+    * `NodeSeq` is part of Scala’s built-in XML support and represents a list of XML nodes.
+    * So basically a snippet replaces a piece of the HTML template with dynamic content.
+* Most snippets use Lift’s support for CSS-style selectors to indicate what part of the HTML to replace.
+    * These snippets take the form `<selector> #> <replacement>`.
+* Since Cascading Style Sheets (CSS) language is already familiar to all web developers, this provides powerful search capability without a big learning curve.
+    * Similar approach to the jQuery JavaScript library: applies existing CSS language to an alternate use.
+
+### Snippet Examples
+
+* `”span” #> “<a></a>”
+    * Using the name of a tag selects all the tags of that type within the current tag and completely replaces them.
+    * This is mainly useful when combined with other selectors.
+* `”span *” #> “Hello!”`
+    * This example replaces the contents of all the span tags within the current tag with the string “Hello!”.
+    * The asterisk selects the contents of the selection.
+* `”#mySpan *” #> “Hello!”`
+    * This example replaces the contents of the tag with an id attribute of `mySpan` with the string “Hello!”.
+* `”span#mySpan * #> “Hello!”`
+    * This example shows how multiple selectors can be combined together.
+    * The result selects the contents of a span tag with an id of “mySpan”.
+* `”[href]” #> “http://www.google.com”`
+    * This example selects the value of the href attribute on the current tag.
+    * The bracket notation is used to access attributes of tags.
+* `”@foo *” #> “Hello!”
+    * This example uses the `@` selector to select elements with their `name` attributes set to “foo”.
+* `”[class+]” #> “selected”`
+    * Adding a plus-sign to the attribute selector causes the replacement to be appended to the existing value rather than replacing it.
+* `”[class!]” #> “selected”`
+    * Similarly, adding an exclamation point to the attribute selector causes the replacement to be appended to the existing value rather than replacing it.
 
 
 
